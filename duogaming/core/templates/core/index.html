@@ -4,19 +4,19 @@
 
 {% block content %}
     <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
-        <h2 class="mb-12 text-2xl text-center">Juegos</h2>
+        <h2 class="mb-12 text-2xl text-center">Categorías</h2>
 
         <div class="grid grid-cols-3 gap-3">
-            {%for juego in juegos%}
+            {%for categoria in categorias%}
                 <div>
                     <a href="#">
                         <div>
-                            <img src="{{ juego.imagen.url }}" class="rounded-t-xl">
+                            <img src="{{ categoria.imagen.url }}" class="rounded-t-xl">
                         </div>
 
                         <div class="p-6 bg-white rounded-b-xl">
-                            <h2 class="text-2xl"> {{ juego.nombre }} </h2>
-                            <p class="text-gray-500"> Precio: {{ juego.precio }}</p>
+                            <h2 class="text-2xl"> {{ categoria.nombre }} </h2>
+                            <p class="text-gray-500"> {{ categoria.descripcion }}</p>
                         </div>
 
                     </a>
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+    {% comment %} <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
         <h2 class="mb=12 text-2xl text-center">Categorías</h2>
 
         <div class="grid grid-cols-3 gap-3">
@@ -41,7 +41,7 @@
                 </div>
             {%endfor%}
         </div>
-    </div>
+    </div> {% endcomment %}
 
 {% endblock content %}
 

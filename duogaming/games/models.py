@@ -9,6 +9,9 @@ class Category(models.Model):
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=255)
+    imagen = models.ImageField(upload_to='categoria_imagenes', blank=True, null=True)
+    descripcion = models.TextField(blank=True, null=True)
+
 
     class Meta:
         ordering = ('nombre',)
