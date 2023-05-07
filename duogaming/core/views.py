@@ -14,6 +14,5 @@ def index(request):
         'juegos': juegos,
     })
 
-def contact(request):
-    return render(request, 'core/contact.html')
+
 

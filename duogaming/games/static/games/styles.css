@@ -1,0 +1,62 @@
+.category-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%; /* Adjust this value to set the desired width */
+    height: 400px; /* Adjust this value to set the desired height */
+}
+
+.category-name {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+
+@media (max-width: 768px) {
+    .category-background {
+        height: 300px; /* Adjust this value for smaller screens */
+    }
+
+    .category-name {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+}
+@media (max-width: 500px) {
+    .category-background {
+        height: 200px; /* Adjust this value for smaller screens */
+    }
+
+    .category-name {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+/* EJEMPLO DE COMO HACER ITEMS SER RESPONSIVOS: */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1;
+    min-width: 300px; /* Adjust this value based on your desired minimum width */
+    padding: 1rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .item {
+        min-width: 100%; /* Make items full width on smaller screens */
+    }
+}

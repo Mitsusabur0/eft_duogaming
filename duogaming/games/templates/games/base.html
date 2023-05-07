@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'games/styles.css' %}">
     <title> {%block title%}{%endblock%} | Duogaming</title>
 </head>
 
@@ -22,7 +24,7 @@
         </div>
     </nav>
 
-    <div class = "px-6 py-6">
+    <div>
         {% block content %}
         {% endblock content %}
     </div>    
