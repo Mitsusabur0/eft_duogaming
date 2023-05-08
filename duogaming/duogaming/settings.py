@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'core',
     'games',
+    'rest_framework',
+    'api',
 
 ]   
 
@@ -56,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'core.middleware.AdminAccessMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'duogaming.urls'

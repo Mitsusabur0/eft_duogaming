@@ -16,6 +16,8 @@ class Categoria(models.Model):
         ordering = ('nombre',)
     def __str__(self):
         return self.nombre
+    def get_games_serialized(self):
+        return [{"id": game.id, "nombre": game.nombre} for game in self.juegos.all()]
 
 class Juego(models.Model):
     categoria = models.ForeignKey(Categoria, related_name = 'categoria', on_delete=models.CASCADE)

@@ -21,6 +21,9 @@ def categoria(request, nombre_categoria):
         'juegos': juegos,
     })
 
+
+
+
 @login_required
 @user_passes_test(user_in_juego_permisos, login_url='/')
 def nuevo_juego(request):
