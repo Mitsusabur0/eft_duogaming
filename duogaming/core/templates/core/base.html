@@ -17,6 +17,7 @@
 
         <div class="space-x-6">
             <a href="{% url 'games:nuevo'  %}" class="text-lg font-semibold hover:text-gray-500">Agregar Juego</a>
+            <a href="{% url 'games:eliminar_juego'  %}" class="text-lg font-semibold hover:text-gray-500">Eliminar Juego</a>
             <a href="#" class="text-lg font-semibold hover:text-gray-500">Browse</a>
 
             {% if request.user.is_authenticated %}

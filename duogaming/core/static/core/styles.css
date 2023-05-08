@@ -37,23 +37,6 @@
     }
 }
 
-
-/* .container {
-    margin: 20px;
-    padding: 20px;
-    background-color: grey;
-    border-radius: 15px;
+select {
+    border: 10px solid black;
 }
-
-.lista-categorias {
-    display: flex;
-    gap: 20px;
-    justify-content: space-evenly;
-}
-
-.categoria {
-    padding: 6px;
-    background-color: white;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-} */

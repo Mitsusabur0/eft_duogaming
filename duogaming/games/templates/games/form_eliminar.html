@@ -8,9 +8,31 @@
 
         <form method="post" action=".">
             {% csrf_token %}
-            {{ form.as_p }}
+            {% comment %} {{ form.as_p }} {% endcomment %}
+            {% comment %} <div class="mb-3">
+                <label class="inline-block mb-2">Categoría</label><br>
+                {{ form.categoria }}
+            </div> {% endcomment %}
+            <div class="mb-3">
+                <label class="inline-block mb-2">Nombre</label><br>
+                {{ form.juego }}
+            </div>
+
             <button class="py-4 px-8 txt-lg bg-red-500 hover:bg-red-700 rounded-xl text-white">Eliminar</button>
         </form>
+        <br>
 
+
+        {% if messages %}
+        <ul class="messages">
+            <br>
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </div>
+
+
+
 {% endblock content %}

@@ -22,7 +22,7 @@ class NuevoJuegoForm(forms.ModelForm):
     imagen = forms.ImageField(validators=[validate_square_image], label='Imagen')
 
 class EliminarJuegoForm(forms.Form):
-    categoria = forms.ModelChoiceField(queryset=Categoria.objects.all(), label='Categoria')
+    # categoria = forms.ModelChoiceField(queryset=Categoria.objects.all(), label='Categoria')
     juego = forms.ModelChoiceField(queryset=Juego.objects.all(), label='Juego')
 
 

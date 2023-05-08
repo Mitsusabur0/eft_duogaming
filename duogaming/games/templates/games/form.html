@@ -7,7 +7,14 @@
     <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
 
         <h1 class="mb-6 text-3xl"> {{ title }} </h1>
-
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        <br>
+        {% endif %}
         <form method="post" action="." enctype="multipart/form-data">
             {% csrf_token %}
 
@@ -41,13 +48,7 @@
                     {{ form.non_field_errors }}
                 </div>
             {% endif %}
-            {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
+
             <button class="py-4 px-8 txt-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Submit</button>
 
         </form>
