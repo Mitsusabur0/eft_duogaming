@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
+        <h1 class="mb-6 text-3xl">{{ title }}</h1>
+
+        <form method="post" action=".">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="py-4 px-8 txt-lg bg-red-500 hover:bg-red-700 rounded-xl text-white">Eliminar</button>
+        </form>
+
+    </div>
+{% endblock content %}

@@ -10,7 +10,7 @@
         <div class="grid grid-cols-5 gap-10">
             {%for categoria in categorias%}
                 <div>
-                    <a href="{% url 'categoria' categoria.nombre %}">
+                    <a href="{% url 'games:categoria' categoria.nombre %}">
                         <div>
                             <img src="{{ categoria.imagen.url }}" class="rounded-t-xl">
                         </div>
