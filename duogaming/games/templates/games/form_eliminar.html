@@ -8,11 +8,6 @@
 
         <form method="post" action=".">
             {% csrf_token %}
-            {% comment %} {{ form.as_p }} {% endcomment %}
-            {% comment %} <div class="mb-3">
-                <label class="inline-block mb-2">Categoría</label><br>
-                {{ form.categoria }}
-            </div> {% endcomment %}
             <div class="mb-3">
                 <label class="inline-block mb-2">Nombre</label><br>
                 {{ form.juego }}
@@ -24,8 +19,7 @@
 
 
         {% if messages %}
-        <ul class="messages">
-            <br>
+        <ul class=" p-3 bg-green-100 rounded-xl">
             {% for message in messages %}
                 <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
             {% endfor %}
