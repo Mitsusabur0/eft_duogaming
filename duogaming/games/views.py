@@ -9,7 +9,7 @@ from django.http import JsonResponse
 def user_in_juego_permisos(user):
     if user.is_superuser:
         return True
-    return user.groups.filter(name='juego_permisos').exists()
+    return user.groups.filter(name='permisos_juegos').exists()
 
 # Create your views here.
 def categoria(request, nombre_categoria):
@@ -22,7 +22,7 @@ def categoria(request, nombre_categoria):
     })
 
 @login_required
-@user_passes_test(user_in_juego_permisos)
+@user_passes_test(user_in_juego_permisos, login_url='/')
 def nuevo_juego(request):
     if request.method == 'POST':
         form = NuevoJuegoForm(request.POST, request.FILES)

@@ -1,4 +1,7 @@
 from django.db import models
+from django.db import models
+from django.dispatch import receiver
+from django.db.models.signals import post_delete
 
 # Create your models here.
 class Category(models.Model):
@@ -28,3 +31,7 @@ class Juego(models.Model):
         return self.nombre
 
     
+def delete_juego_image(sender, instance, **kwargs):
+    instance.imagen.delete(save=False)
+
+post_delete.connect(delete_juego_image, sender=Juego)
