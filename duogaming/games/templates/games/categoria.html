@@ -9,7 +9,7 @@
         <div class="grid grid-cols-5 gap-10">
             {%for juego in juegos%}
                 {% if juego.categoria == categoria %}
-                    <div>
+                    <div style="box-shadow: 0px 4px 30px 0px black; border-radius: 10px;">
                         <div>
                             <img src="{{ juego.imagen.url }}" class="rounded-t-xl">
                         </div>

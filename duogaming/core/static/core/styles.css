@@ -1,5 +1,8 @@
+
+
 /* Header background */
 .category-background {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,6 +13,7 @@
     width: auto; /* Adjust this value to set the desired width */
     height: 400px; /* Adjust this value to set the desired height */
 }
+
 
 .category-name {
     font-size: 4rem;
